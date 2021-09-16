@@ -1,0 +1,27 @@
+<%- include("header") -%>
+
+<body class="bg">
+<div class="wrapper">
+    <div class="nested-wrapper">
+        <div class="content">
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;">WELCOME TO THE TSF BANK</h1>
+            <h5 style="color: black; font-style: italic;">AP KAY GHAR MEIN HAMARA ACCOUNT</h5>
+        </div>
+    </div>
+    
+</div>
+</body>
+
+<script >
+    $(document).ready(function(){
+        $("#footer").css("display","none");
+        $("#search-box").css("display","none");
+
+        let bodyHeight = $(document).outerHeight();
+            let footerHeight = $(".navbar").outerHeight();
+            let bodyWrapperHeight = bodyHeight-footerHeight;
+            $(".wrapper").css('height',`${bodyWrapperHeight}px`);
+    });
+</script>
+
+<%-include("footer")-%>
